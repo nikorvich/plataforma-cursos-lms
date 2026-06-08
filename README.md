@@ -66,13 +66,13 @@ src/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/nikorvich/lab-plataforma-curso.git
+git clone https://github.com/nikorvich/plataforma-cursos-lms
 ```
 
 Acesse a pasta do projeto:
 
 ```bash
-cd lab-plataforma-cursos
+cd plataforma-cursos-lms
 ```
 
 Instale as dependências:
