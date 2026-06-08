@@ -1,0 +1,29 @@
+{
+  "name": "lab-plataforma-cursos",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:frontend": "vite",
+    "dev:server": "json-server --watch db.json --port 3001",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:server\"",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.3",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "json-server": "^1.0.0-beta.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}

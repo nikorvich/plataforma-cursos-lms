@@ -1,0 +1,223 @@
+{
+  "usuarios": [
+    {
+      "id": "u1",
+      "nomeCompleto": "Carlos Silva",
+      "email": "carlos@academic.com",
+      "senhaHash": "ef92b",
+      "dataCadastro": "2026-01-10"
+    },
+    {
+      "id": "u2",
+      "nomeCompleto": "Ana Souza",
+      "email": "ana@academic.com",
+      "senhaHash": "82bas",
+      "dataCadastro": "2026-02-15"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "c1",
+      "nome": "Programação",
+      "descricao": "Cursos de Desenvolvimento de Software e Engenharia de Sistemas"
+    },
+    {
+      "id": "c2",
+      "nome": "Design",
+      "descricao": "Cursos de Design de Interfaces e UX/UI"
+    }
+  ],
+  "cursos": [
+    {
+      "id": "curso1",
+      "titulo": "React Avançado com TypeScript",
+      "descricao": "Aprenda a criar interfaces reativas e tipadas utilizando componentes modernos.",
+      "idInstrutor": "u1",
+      "idCategoria": "c1",
+      "nivel": "Avançado",
+      "dataPublicacao": "2026-03-01",
+      "totalAulas": 2,
+      "totalHoras": 10,
+      "capaUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "curso2",
+      "titulo": "Fundamentos de UX Design",
+      "descricao": "Entenda as necessidades do usuário final construindo jornadas intuitivas.",
+      "idInstrutor": "u1",
+      "idCategoria": "c2",
+      "nivel": "Iniciante",
+      "dataPublicacao": "2026-04-12",
+      "totalAulas": 1,
+      "totalHoras": 5,
+      "capaUrl": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=600&auto=format&fit=crop"
+    }
+  ],
+  "modulos": [
+    {
+      "id": "m1",
+      "idCurso": "curso1",
+      "titulo": "Configuração de Ambientes Modernos",
+      "ordem": 1
+    },
+    {
+      "id": "m2",
+      "idCurso": "curso1",
+      "titulo": "Roteamento e Arquitetura Avançada",
+      "ordem": 2
+    },
+    {
+      "id": "m3",
+      "idCurso": "curso2",
+      "titulo": "Introdução à Pesquisa de Usuário",
+      "ordem": 1
+    }
+  ],
+  "aulas": [
+    {
+      "id": "a1",
+      "idModulo": "m1",
+      "titulo": "Instalando Node e Vite no OpenSUSE",
+      "tipoConteudo": "Vídeo",
+      "urlConteudo": "https://video.url",
+      "duracaoMinutos": 15,
+      "ordem": 1
+    },
+    {
+      "id": "a2",
+      "idModulo": "m2",
+      "titulo": "Gerenciando Ciclos Globais e TypeScript",
+      "tipoConteudo": "Vídeo",
+      "urlConteudo": "https://video.url",
+      "duracaoMinutos": 25,
+      "ordem": 1
+    },
+    {
+      "id": "a3",
+      "idModulo": "m3",
+      "titulo": "Criando Personas Eficientes",
+      "tipoConteudo": "Texto",
+      "urlConteudo": "https://text.url",
+      "duracaoMinutos": 20,
+      "ordem": 1
+    }
+  ],
+  "matriculas": [
+    {
+      "id": "mat1",
+      "idUsuario": "u2",
+      "idCurso": "curso1",
+      "dataMatricula": "2026-05-01",
+      "dataConclusao": null
+    }
+  ],
+  "progresso_aulas": [
+    {
+      "id": "p1",
+      "idUsuario": "u2",
+      "idAula": "a1",
+      "dataConclusao": "2026-05-02",
+      "status": "Concluído"
+    },
+    {
+      "id": "VSpcoqccf1s",
+      "idUsuario": "u2",
+      "idAula": "a2",
+      "dataConclusao": "2026-06-07",
+      "status": "Concluído"
+    },
+    {
+      "id": "lR2RqFQNKHY",
+      "idUsuario": "u2",
+      "idAula": "a3",
+      "dataConclusao": "2026-06-07",
+      "status": "Concluído"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": "av1",
+      "idUsuario": "u2",
+      "idCurso": "curso1",
+      "nota": 5,
+      "comentario": "Excelente didática do instrutor!",
+      "dataAvaliacao": "2026-05-03"
+    }
+  ],
+  "trilhas": [
+    {
+      "id": "t1",
+      "titulo": "Formação Engenheiro Frontend",
+      "descricao": "Uma jornada completa do design básico ao deploy de aplicações React complexas.",
+      "idCategoria": "c1"
+    }
+  ],
+  "trilhas_cursos": [
+    {
+      "id": "tc1",
+      "idTrilha": "t1",
+      "idCurso": "curso2",
+      "ordem": 1
+    },
+    {
+      "id": "tc2",
+      "idTrilha": "t1",
+      "idCurso": "curso1",
+      "ordem": 2
+    }
+  ],
+  "certificados": [
+    {
+      "id": "cert1",
+      "idUsuario": "u2",
+      "idCurso": "curso2",
+      "idTrilha": null,
+      "codigoVerificacao": "CERT-998124-UX",
+      "dataEmissao": "2026-05-10"
+    },
+    {
+      "id": "TC2DENR92hc",
+      "idUsuario": "u2",
+      "idCurso": "curso1",
+      "idTrilha": null,
+      "codigoVerificacao": "CERT-709863-ACAD",
+      "dataEmissao": "2026-06-07"
+    }
+  ],
+  "planos": [
+    {
+      "id": "plano_mensal",
+      "nome": "Plano Premium Mensal",
+      "descricao": "Acesso irrestrito a todos os cursos e emissão de certificados válidos.",
+      "preco": 49.9,
+      "duracaoMeses": 1
+    },
+    {
+      "id": "plano_anual",
+      "nome": "Plano Premium Anual",
+      "descricao": "Melhor custo benefício com mentorias exclusivas inclusas de bônus.",
+      "preco": 399,
+      "duracaoMeses": 12
+    }
+  ],
+  "assinaturas": [
+    {
+      "id": "ass1",
+      "idUsuario": "u2",
+      "idPlano": "plano_mensal",
+      "dataInicio": "2026-05-01",
+      "dataFim": "2026-06-01"
+    }
+  ],
+  "pagamentos": [
+    {
+      "id": "pag1",
+      "idAssinatura": "ass1",
+      "valorPago": 49.9,
+      "dataPagamento": "2026-05-01",
+      "metodoPagamento": "Cartão de Crédito",
+      "idTransacaoGateway": "TX-PROD-99214A"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
