@@ -1,73 +1,119 @@
-# React + TypeScript + Vite
+# Plataforma de Cursos Online (LMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web de gerenciamento de cursos desenvolvido com React e TypeScript. A aplicação permite organizar conteúdos educacionais em categorias, cursos, módulos e aulas, além de simular funcionalidades comuns de plataformas de ensino, como matrículas, acompanhamento de progresso, certificados e planos de assinatura.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* React
+* TypeScript
+* Bootstrap 5
+* Vite
+* JSON Server
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Catálogo de Cursos
 
-## Expanding the ESLint configuration
+* Listagem de cursos disponíveis
+* Filtro por categorias
+* Visualização detalhada do conteúdo de cada curso
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Estrutura Acadêmica
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Organização em categorias
+* Cursos divididos em módulos
+* Módulos compostos por aulas
+* Navegação hierárquica do conteúdo
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Matrículas e Progresso
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Simulação de matrícula em cursos
+* Controle de aulas concluídas
+* Acompanhamento do progresso do aluno
+
+### Certificados
+
+* Geração de certificados de conclusão
+* Código de verificação para cada certificado emitido
+
+### Planos e Assinaturas
+
+* Gerenciamento de planos disponíveis
+* Controle de assinaturas
+* Registro de pagamentos
+
+## Estrutura do Projeto
+
+```text
+src/
+├── components/
+│   └── Navbar.tsx
+├── model/
+│   └── types.ts
+├── pages/
+│   ├── Dashboard.tsx
+│   ├── UserProgress.tsx
+│   ├── Financial.tsx
+│   └── Admin.tsx
+├── services/
+│   └── api.ts
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone o repositório:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/nikorvich/lab-plataforma-curso.git
 ```
+
+Acesse a pasta do projeto:
+
+```bash
+cd lab-plataforma-cursos
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie a aplicação:
+
+```bash
+npm run dev
+```
+
+A aplicação ficará disponível normalmente em:
+
+```text
+http://localhost:5173
+```
+
+## API de Desenvolvimento
+
+O projeto utiliza JSON Server para simular uma API REST local a partir do arquivo `db.json`.
+
+Endpoints disponíveis:
+
+* `/usuarios`
+* `/categorias`
+* `/cursos`
+* `/modulos`
+* `/aulas`
+* `/matriculas`
+* `/progresso_aulas`
+* `/avaliacoes`
+* `/trilhas`
+* `/trilhas_cursos`
+* `/certificados`
+* `/planos`
+* `/assinaturas`
+* `/pagamentos`
+
+## Objetivo
+
+Este projeto foi desenvolvido para praticar conceitos de desenvolvimento frontend com React, TypeScript, consumo de API REST, componentização, gerenciamento de estado e modelagem de dados.
